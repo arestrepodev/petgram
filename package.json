@@ -3,15 +3,25 @@
 	"version": "1.0.0",
 	"description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
 	"main": "index.js",
+	"scripts": {
+		"now-build": "npm run build",
+		"dev": "webpack-dev-server",
+		"lint fix": "standard --fix",
+		"lint": "standard",
+		"build": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
 	"dependencies": {
 		"react": "^16.9.0",
-		"react-dom": "^16.9.0"
+		"react-dom": "^16.9.0",
+		"styled-components": "^4.3.2"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.5.5",
 		"@babel/preset-env": "^7.5.5",
 		"@babel/preset-react": "^7.0.0",
 		"babel-loader": "^8.0.6",
+		"eslint-plugin-html": "^6.0.0",
 		"html-webpack-plugin": "^3.2.0",
 		"standard": "^14.0.0",
 		"webpack": "4.39.2",
@@ -26,14 +36,10 @@
 	"eslintConfig": {
 		"extends": [
 			"./node_modules/standard/eslintrc.json"
+		],
+		"plugins":[
+			"html"
 		]
-	},
-	"scripts": {
-		"dev": "webpack-dev-server",
-		"lint fix": "standard --fix",
-		"lint": "standard",
-		"build": "webpack",
-		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
 		"type": "git",
