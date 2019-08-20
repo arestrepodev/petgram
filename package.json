@@ -1,29 +1,49 @@
 {
-    "name": "curso-platzi-react-avanzado",
-    "version": "1.0.0",
-    "description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
-    "main": "index.js",
-    "dependencies": {},
-    "devDependencies": {
-        "html-webpack-plugin": "^3.2.0",
-        "webpack": "4.39.2",
-        "webpack-cli": "3.3.7",
-        "webpack-dev-server": "^3.8.0"
-    },
-    "scripts": {
-        "dev": "webpack-dev-server",
-        "build": "webpack",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ArnoldRestrepo/petgram.git"
-    },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/ArnoldRestrepo/petgram/issues"
-    },
-    "homepage": "https://github.com/ArnoldRestrepo/petgram#readme"
+	"name": "curso-platzi-react-avanzado",
+	"version": "1.0.0",
+	"description": "Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)",
+	"main": "index.js",
+	"dependencies": {
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.5.5",
+		"@babel/preset-env": "^7.5.5",
+		"@babel/preset-react": "^7.0.0",
+		"babel-loader": "^8.0.6",
+		"html-webpack-plugin": "^3.2.0",
+		"standard": "^14.0.0",
+		"webpack": "4.39.2",
+		"webpack-cli": "3.3.7",
+		"webpack-dev-server": "^3.8.0"
+	},
+	"standard": {
+		"ignore": [
+			"/api/**"
+		]
+	},
+	"eslintConfig": {
+		"extends": [
+			"./node_modules/standard/eslintrc.json"
+		]
+	},
+	"scripts": {
+		"dev": "webpack-dev-server",
+		"lint fix": "standard --fix",
+		"lint": "standard",
+		"build": "webpack",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ArnoldRestrepo/petgram.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ArnoldRestrepo/petgram/issues"
+	},
+	"homepage": "https://github.com/ArnoldRestrepo/petgram#readme"
 }
