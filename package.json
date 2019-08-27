@@ -12,34 +12,21 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
-		"react": "^16.9.0",
-		"react-dom": "^16.9.0",
-		"styled-components": "^4.3.2"
+		"react": "16.9.0",
+		"react-dom": "16.9.0",
+		"styled-components": "4.3.2"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.5.5",
-		"@babel/preset-env": "^7.5.5",
-		"@babel/preset-react": "^7.0.0",
-		"babel-loader": "^8.0.6",
-		"eslint-plugin-html": "^6.0.0",
-		"html-webpack-plugin": "^3.2.0",
-		"standard": "^14.0.0",
+		"@babel/core": "7.5.5",
+		"@babel/preset-env": "7.5.5",
+		"@babel/preset-react": "7.0.0",
+		"babel-loader": "8.0.6",
+		"eslint-plugin-html": "6.0.0",
+		"html-webpack-plugin": "3.2.0",
+		"standard": "14.0.0",
 		"webpack": "4.39.2",
 		"webpack-cli": "3.3.7",
-		"webpack-dev-server": "^3.8.0"
-	},
-	"standard": {
-		"ignore": [
-			"/api/**"
-		]
-	},
-	"eslintConfig": {
-		"extends": [
-			"./node_modules/standard/eslintrc.json"
-		],
-		"plugins":[
-			"html"
-		]
+		"webpack-dev-server": "3.8.0"
 	},
 	"repository": {
 		"type": "git",
