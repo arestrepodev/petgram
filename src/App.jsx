@@ -1,14 +1,14 @@
 import React from "react";
 import { ListOfCategories } from "./components/ListOfCategories";
 import { GlobalStyles } from "./GlobalStyles";
-import { PhotoCard } from "./components/PhotoCard";
+import { ListOfPhotoCards } from "./components/ListOfPhotoCards";
 
 export const App = () => {
 	return (
 		<div>
 			<GlobalStyles />
 			<ListOfCategories />
-			<PhotoCard />
+			<ListOfPhotoCards />
 		</div>
 	);
 };
