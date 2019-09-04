@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Category } from "../Category";
 import { List, Item } from "./styles";
-import { categories } from "../../../api/db.json";
 
 export const ListOfCategories = () => {
+	const [categories, setCategories] = useState([]);
+
+	useEffect(() => {
+		const getCategories = async () => {
+			let response = await fetch(
+				"https://petgram-server-arnold.restrepoarnold.now.sh/categories"
+			);
+			response = await response.json();
+			setCategories(response);
+		};
+		getCategories();
+	}, []);
+
 	return (
 		<List>
 			{categories.map(category => (

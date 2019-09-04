@@ -1,3 +1,12 @@
-# curso-platzi-react-avanzado ⚛️
+# Petgram - Curso React Avanzado
 
-Repositorio con el código del [Curso Avanzado de React de Platzi](https://platzi.com/cursos/react-avanzado/)
+## ¿Qué son React Hooks?
+
+Funciones que nos permiten acceder a todas las características de **React** desde componentes funcionales.
+
+### Ventajas:
+
+- Separación de Conceptos
+- 100% recompatibles
+- Mejor transpilación babel
+- Mejor Performance
