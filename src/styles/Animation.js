@@ -12,6 +12,21 @@ const fadeInKeyFrames = keyframes`
 	}
 `;
 
+const swipDownKeyFrames = keyframes`
+	from {
+		opacity: 0;
+		translate: (10px,0)
+	}
+	to{
+		opacity: 1;
+		translate: (0px,0)
+	}
+`;
+
 export const fadeIn = ({ time = "500ms", type = "ease" } = {}) => css`
 	animation: ${time} ${fadeInKeyFrames} ${type};
+`;
+
+export const swipDown = ({ time = "500ms", type = "ease" } = {}) => css`
+	animation: ${time} ${swipDownKeyFrames} ${type};
 `;

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { swipDown } from "../../styles/Animation";
 
 export const List = styled.ul`
 	display: flex;
@@ -17,6 +18,7 @@ export const List = styled.ul`
 		position: fixed;
 		top: -20px;
 		transform: scale(0.5);
+		${swipDown({ time: "200ms", type: "ease-in" })}
 	}
 `;
 
