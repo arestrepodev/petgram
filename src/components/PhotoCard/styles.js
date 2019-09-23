@@ -29,6 +29,7 @@ export const Img = styled.img`
 
 export const Button = styled.button`
 	padding: 1rem 0;
+	cursor: pointer;
 	display: flex;
 	align-items: center;
 	& svg {
