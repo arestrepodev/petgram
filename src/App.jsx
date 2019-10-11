@@ -6,12 +6,22 @@ import { Logo } from "./components/Logo";
 import "regenerator-runtime/runtime";
 
 export const App = () => {
+	const urlParams = new window.URLSearchParams(window.location.search);
+	const detailId = urlParams.get("detail");
+	console.log(detailId);
+
 	return (
 		<>
 			<Logo />
 			<GlobalStyles />
-			<ListOfCategories />
-			<ListOfPhotoCards categoryId={6} />
+			{detailId ? (
+				<h1>Detail Id</h1>
+			) : (
+				<>
+					<ListOfCategories />
+					<ListOfPhotoCards categoryId={1} />
+				</>
+			)}
 		</>
 	);
 };
