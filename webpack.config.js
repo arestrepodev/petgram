@@ -7,7 +7,8 @@ module.exports = {
 	},
 	output: {
 		filename: "app.bundle.js",
-		path: path.join(__dirname, "js/")
+		path: path.join(__dirname, "js/"),
+		publicPath: "/"
 	},
 	devServer: {
 		port: 9000
@@ -33,6 +34,6 @@ module.exports = {
 		]
 	},
 	resolve: {
-		extensions: [".js", ".jsx", ".json", ".mjs", "gql", "graphql",".cjs"]
+		extensions: [".js", ".jsx", ".json", ".mjs", "gql", "graphql", ".cjs"]
 	}
 };

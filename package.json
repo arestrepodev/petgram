@@ -5,7 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"now-build": "npm run build",
-		"dev": "webpack-dev-server",
+		"dev": "webpack-dev-server --history-api-fallback",
 		"lint fix": "standard --fix",
 		"lint": "standard",
 		"build": "webpack",
@@ -13,6 +13,7 @@
 	},
 	"dependencies": {
 		"@apollo/react-hooks": "3.1.1",
+		"@reach/router": "1.2.1",
 		"apollo-boost": "0.4.4",
 		"graphql": "14.5.7",
 		"graphql-tag": "2.10.1",
