@@ -1,13 +1,11 @@
-import React from "react";
 import "regenerator-runtime/runtime";
+import React from "react";
 import { GlobalStyles } from "./styles/GlobalStyles";
-import { useGetSinglePhoto } from "./hooks/useSinglePhoto";
+import { Router } from "@reach/router";
 import { Logo } from "./components/Logo";
-import { PhotoCard } from "./components/PhotoCard";
 import { Home } from "./views/Home";
 import { Detail } from "./views/Detail";
-import { Router } from "@reach/router";
-
+import { NavBar } from "./components/NavBar";
 export const App = () => {
 	return (
 		<>
@@ -18,6 +16,7 @@ export const App = () => {
 				<Home path="/pet/:categoryId" />
 				<Detail path="/detail/:detailId" />
 			</Router>
+			<NavBar />
 		</>
 	);
 };
