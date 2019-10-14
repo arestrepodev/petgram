@@ -25,7 +25,7 @@ const useGetPhotos = categoryId => {
 
 export const ListOfPhotoCards = ({ categoryId }) => {
 	const { loading, data, error } = useGetPhotos(categoryId);
-	if (loading) return "";
+	if (loading) return <p>Cargando Mascotas...</p>;
 	return (
 		<section>
 			{data.photos.map(photo => (
