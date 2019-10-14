@@ -4,6 +4,7 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { useNearScreen } from "../../hooks/useNearScreen";
 import { FavButton } from "../FavButton";
 import { useMutation } from "@apollo/react-hooks";
+import { Link } from "@reach/router";
 import gql from "graphql-tag";
 
 const LIKE_PHOTO = gql`
@@ -36,11 +37,11 @@ export const PhotoCard = ({ id, likes = 0, src = DEFAULT_IMAGE }) => {
 		<Article ref={element}>
 			{show && (
 				<>
-					<a href={`/?detail=${id}`}>
+					<Link to={`/detail/${id}`}>
 						<ImgWrapper>
 							<Img src={src} alt="User" />
 						</ImgWrapper>
-					</a>
+					</Link>
 					<FavButton liked={liked} likes={likes} onClick={handleFavClick} />
 				</>
 			)}
