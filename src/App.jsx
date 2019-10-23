@@ -1,5 +1,6 @@
 import "regenerator-runtime/runtime";
 import React from "react";
+import Context from "./Context";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { Router } from "@reach/router";
 import { Logo } from "./components/Logo";
@@ -9,10 +10,6 @@ import { User } from "./views/User";
 import { NotRegisteredUser } from "./views/NotRegisterUser";
 import { Detail } from "./views/Detail";
 import { NavBar } from "./components/NavBar";
-
-const UserLogged = ({ children }) => {
-	return children({ isAuth: false });
-};
 
 export const App = () => {
 	return (
@@ -24,7 +21,7 @@ export const App = () => {
 				<Home path="/pet/:categoryId" />
 				<Detail path="/detail/:detailId" />
 			</Router>
-			<UserLogged>
+			<Context.Consumer>
 				{({ isAuth }) =>
 					isAuth ? (
 						<Router>
@@ -38,7 +35,7 @@ export const App = () => {
 						</Router>
 					)
 				}
-			</UserLogged>
+			</Context.Consumer>
 			<NavBar />
 		</>
 	);
