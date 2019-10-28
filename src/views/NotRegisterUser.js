@@ -50,12 +50,14 @@ export const NotRegisteredUser = () => {
 							title='Registarse'
 							disabled={loadingRegister}
 							error={errorMsgRegister}
+							loading={loadingRegister}
 						/>
 						<UserForm
 							onSubmit={handleLogin}
 							title='Iniciar Sesión'
 							disabled={loadingLogin}
 							error={errorMsgLogin}
+							loading={loadingLogin}
 						/>
 					</>
 				);

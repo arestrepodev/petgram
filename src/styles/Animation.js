@@ -1,4 +1,4 @@
-import { keyframes, css } from "styled-components";
+import { keyframes, css } from 'styled-components';
 
 const fadeInKeyFrames = keyframes`
 	from {
@@ -23,10 +23,22 @@ const swipDownKeyFrames = keyframes`
 	}
 `;
 
-export const fadeIn = ({ time = "500ms", type = "ease" } = {}) => css`
+const spinnerAnimation = keyframes`
+	from {
+		transform: rotate(0deg);
+	} to {
+		transform: rotate(360deg);
+	}
+`;
+
+export const fadeIn = ({ time = '500ms', type = 'ease' } = {}) => css`
 	animation: ${time} ${fadeInKeyFrames} ${type};
 `;
 
-export const swipDown = ({ time = "500ms", type = "ease" } = {}) => css`
+export const swipDown = ({ time = '500ms', type = 'ease' } = {}) => css`
 	animation: ${time} ${swipDownKeyFrames} ${type};
+`;
+
+export const rotateSpinner = ({ time = '500ms', type = 'ease' } = {}) => css`
+	animation: ${time} ${spinnerAnimation} ${type};
 `;

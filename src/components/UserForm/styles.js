@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { MdAutorenew } from 'react-icons/md';
+import { rotateSpinner } from '../../styles/Animation';
 
 export const Form = styled.form`
 	padding: 0 16px;
@@ -37,4 +39,8 @@ export const FormTitle = styled.h2`
 export const Error = styled.span`
 	font-size: 14px;
 	color: red;
+`;
+
+export const LoadingIcon = styled(MdAutorenew)`
+	${rotateSpinner({ time: '1s', type: 'ease-in-out infinite' })}
 `;

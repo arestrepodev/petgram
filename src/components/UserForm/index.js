@@ -1,8 +1,9 @@
 import React from 'react';
 import { useInputValue } from '../../hooks/useInputValue';
-import { Form, Input, Button, FormTitle, Error } from './styles';
+import { Form, Input, Button, FormTitle, Error, LoadingIcon } from './styles';
+import { MdAutorenew, MdFavorite } from 'react-icons/md';
 
-export const UserForm = ({ onSubmit, title, disabled, error }) => {
+export const UserForm = ({ onSubmit, title, disabled, error, loading }) => {
 	const email = useInputValue('');
 	const password = useInputValue('');
 	const handleSubmit = event => {
@@ -32,7 +33,7 @@ export const UserForm = ({ onSubmit, title, disabled, error }) => {
 					disabled={disabled}
 				/>
 				<Button type='submit' disabled={disabled}>
-					{title}
+					{title} {loading && <LoadingIcon />}
 				</Button>
 				{error && <Error>{error}</Error>}
 			</Form>
