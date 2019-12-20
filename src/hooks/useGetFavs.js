@@ -12,3 +12,8 @@ const GET_FAVS = gql`
 		}
 	}
 `;
+
+export const useGetSinglePhoto = () => {
+	const { laoding, data, error } = useQuery(GET_FAVS);
+	return { laoding, data, error };
+};
