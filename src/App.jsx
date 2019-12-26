@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime";
 import React from "react";
 import Context from "./Context";
 import { GlobalStyles } from "./styles/GlobalStyles";
