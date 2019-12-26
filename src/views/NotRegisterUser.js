@@ -1,9 +1,9 @@
-import React, { useContext } from 'react';
-import styled from 'styled-components';
-import { Context } from '../Context';
-import { UserForm } from '../components/UserForm';
-import { useRegisterMutation } from '../hooks/useRegisterMutation';
-import { useLoginMutation } from '../hooks/useLoginMutation';
+import React, { useContext } from "react";
+import Layout from "../components/Layout";
+import { Context } from "../Context";
+import { UserForm } from "../components/UserForm";
+import { useRegisterMutation } from "../hooks/useRegisterMutation";
+import { useLoginMutation } from "../hooks/useLoginMutation";
 
 export const NotRegisteredUser = () => {
 	const { activateAuth } = useContext(Context);
@@ -43,26 +43,29 @@ export const NotRegisteredUser = () => {
 	};
 
 	const errorMsgRegister =
-		errorRegister && 'El usuario ya existe o hay algún problema.';
+		errorRegister && "El usuario ya existe o hay algún problema.";
 
-	const errorMsgLogin = errorLogin && 'El email o la contraseña son inválidos.';
+	const errorMsgLogin = errorLogin && "El email o la contraseña son inválidos.";
 
 	return (
-		<>
+		<Layout
+			title="Login - Registro"
+			subtitle="Registrate o Loggeate para disfrutar..."
+		>
 			<UserForm
 				onSubmit={handleRegister}
-				title='Registarse'
+				title="Registarse"
 				disabled={loadingRegister}
 				error={errorMsgRegister}
 				loading={loadingRegister}
 			/>
 			<UserForm
 				onSubmit={handleLogin}
-				title='Iniciar Sesión'
+				title="Iniciar Sesión"
 				disabled={loadingLogin}
 				error={errorMsgLogin}
 				loading={loadingLogin}
 			/>
-		</>
+		</Layout>
 	);
 };

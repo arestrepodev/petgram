@@ -1,6 +1,7 @@
 import React from "react";
 import { useGetSinglePhoto } from "../hooks/useSinglePhoto";
 import { PhotoCard } from "../components/PhotoCard";
+import Layout from "../components/Layout";
 
 const renderSinglePhoto = (data, loading, error) => {
 	if (loading) return <p>Cargando...</p>;
@@ -11,5 +12,9 @@ const renderSinglePhoto = (data, loading, error) => {
 
 export const Detail = ({ detailId }) => {
 	const { data, loading, error } = useGetSinglePhoto(detailId);
-	return renderSinglePhoto(data, loading, error);
+	return (
+		<Layout title={`Fotografia ${detailId}`}>
+			{renderSinglePhoto(data, loading, error)}
+		</Layout>
+	);
 };
