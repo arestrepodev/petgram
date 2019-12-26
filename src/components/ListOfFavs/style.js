@@ -1,0 +1,29 @@
+import styled from "styled-components";
+import { Link as LinkRouter } from "@reach/router";
+
+export const Link = styled(LinkRouter)`
+	border-radius: 8px;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+	display: inline-block;
+	margin: 1%;
+	width: 31.33%;
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		padding-bottom: 100%;
+	}
+`;
+
+export const Grid = styled.article`
+	margin: 1rem 0;
+	padding-bottom: 32px;
+`;
+
+export const Img = styled.img`
+	border-radius: 8px;
+	object-fit: cover;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+`;

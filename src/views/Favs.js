@@ -1,5 +1,9 @@
 import React from "react";
+import ListOfFavs from "../components/ListOfFavs";
 
-export const Favs = () => {
-	return <h1>Favorites</h1>;
-};
+export const Favs = () => (
+	<section>
+		<h1>Favorites</h1>
+		<ListOfFavs />
+	</section>
+);
