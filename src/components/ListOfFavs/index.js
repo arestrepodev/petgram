@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { useGetFavs } from "../../hooks/useGetFavs";
 import { Grid, Img, Link } from "./style";
 
@@ -16,4 +17,12 @@ const ListOfFavs = () => {
 	);
 };
 
+ListOfFavs.propTypes = {
+	favs: PropTypes.arrayOf(
+		PropTypes.shape({
+			id: PropTypes.number.isRequired,
+			src: PropTypes.string.isRequired
+		})
+	)
+};
 export default ListOfFavs;
