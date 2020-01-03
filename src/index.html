@@ -11,5 +11,17 @@
 		<noscript>
 			<h3>Esta App no esta cargando JavaScript</h3>
 		</noscript>
+		<script>
+			if ("serviceWorker" in navigator) {
+				window.addEventListener("load", () => {
+					navigator.serviceWorker
+						.register("/service-worker.js")
+						.then(registration => console.log("SW OK"))
+						.catch(registrationError =>
+							console.log("SW error", registrationError)
+						);
+				});
+			}
+		</script>
 	</body>
 </html>
