@@ -55,5 +55,8 @@
 	"bugs": {
 		"url": "https://github.com/ArnoldRestrepo/petgram/issues"
 	},
-	"homepage": "https://github.com/ArnoldRestrepo/petgram#readme"
+	"homepage": "https://github.com/ArnoldRestrepo/petgram#readme",
+	"engines": {
+		"node": "12.x"
+	}
 }
