@@ -1,13 +1,13 @@
 import React, { useContext } from "react";
 import { Context } from "../Context";
+import Layout from "../components/Layout";
 import SubmitBtn from "../components/SubmitBtn";
 
-export const User = () => {
+export default () => {
 	const { removeAuth } = useContext(Context);
 	return (
-		<>
-			<h1>User</h1>
+		<Layout title="Tu Perfil" subtitle="Tus Pefil en Petgram">
 			<SubmitBtn onClick={removeAuth}>Cerrar Sesión</SubmitBtn>
-		</>
+		</Layout>
 	);
 };

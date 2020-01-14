@@ -1,18 +1,18 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import Context from "./Context";
 import { GlobalStyles } from "./styles/GlobalStyles";
 import { Router } from "@reach/router";
 import { Logo } from "./components/Logo";
 import { Home } from "./views/Home";
-import { Favs } from "./views/Favs";
-import { User } from "./views/User";
 import { NotRegisteredUser } from "./views/NotRegisterUser";
 import { Detail } from "./views/Detail";
 import { NavBar } from "./components/NavBar";
+const Favs = lazy(() => import("./views/Favs"));
+const User = lazy(() => import("./views/User"));
 
 export const App = () => {
 	return (
-		<>
+		<Suspense fallback={"Cargando"}>
 			<Logo />
 			<GlobalStyles />
 			<Router>
@@ -36,6 +36,6 @@ export const App = () => {
 				}
 			</Context.Consumer>
 			<NavBar />
-		</>
+		</Suspense>
 	);
 };
