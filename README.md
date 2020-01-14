@@ -4,9 +4,9 @@ Aplicación para ver las mejores fotos de mascotas en un solo lugar, gatitos, pe
 
 ## Instalación
 
-Este es un proyecto frontend, realizado con **react.js**, para poder empezar:
+Este es un proyecto frontend, realizado con **react.js**. Para poder empezar:
 
-### Presequisitos
+### Pre-requisitos
 
 `node.js 12x, npm, now.js`
 
