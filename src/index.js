@@ -12,7 +12,8 @@ const client = new ApolloClient({
 		const authorization = token ? `Bearer ${token}` : "";
 		operation.setContext({
 			headers: {
-				authorization
+				authorization,
+				"Access-Control-Allow-Origin": "*"
 			}
 		});
 	},
